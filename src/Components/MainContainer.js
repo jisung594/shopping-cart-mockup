@@ -5,18 +5,15 @@ import '../App.scss';
 
 class MainContainer extends Component {
 
-  displayJackets = () => {
-    return jacketData["jackets"].map(jacketObj => {
+  render () {
+    let jacketThumbs = jacketData["jackets"].map(jacketObj => {
       return <ProductThumb key={jacketObj["id"]} jacketData={jacketObj}/>
     })
-  }
 
-  render () {
-    console.log(jacketData["jackets"])
     return (
       <div className="main-container">
-        <h2>Main Container</h2>
-        <img src={jacketData["jackets"][0]["img_src"]} alt="product img"/>
+        <h2>Men's Insulated Jackets</h2>
+        <div className="thumbsList">{jacketThumbs}</div>
       </div>
     );
   }

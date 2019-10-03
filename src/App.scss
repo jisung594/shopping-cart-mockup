@@ -1,3 +1,32 @@
 .App {
+  display: grid;
+  grid-template-rows: 50px auto;
 
+  .navbar {
+    background-color: gray;
+
+    h2 {
+      font-size: 18px;
+      margin: 0;
+    }
+  }
+
+  .main-container {
+    display: grid;
+    grid-template-rows: 80px auto;
+
+    .thumbsList {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      .thumb {
+        margin: 20px;
+
+
+        .pro-price {
+          color: red;
+        }
+      }
+    }
+  }
 }

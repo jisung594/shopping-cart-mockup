@@ -4,59 +4,179 @@
             "id": 1,
             "brand": "The North Face",
             "jacket_name": "Mountain Sweatshirt Full-Zip",
-            "available_sizes": [ "S", "M", "L", "XL"],
-            "colors": ["Black"],
-            "retail_price": 149.00,
-            "sale_price": 102.73,
-            "img_src": "https://www.rei.com/media/a72b2af0-6c2b-4941-ad58-979b567bc3c7?size=2000"
+            "available_sizes": ["S", "M", "L", "XL"],
+            "colors": [
+              {
+                "color":"Black",
+                "img_src": "https://www.rei.com/media/a72b2af0-6c2b-4941-ad58-979b567bc3c7"
+              }
+            ],
+            "retail_price": 200.00,
+            "pro_price": 150.00
         },
         {
             "id": 2,
-            "brand": "Hydrogen",
-            "jacket_name": "colorlessgas",
-            "img_src": "108"
+            "brand": "Outdoor Research",
+            "jacket_name": "Transcendent Down Jacket",
+            "available_sizes": ["S", "M", "L", "XL", "XXL"],
+            "colors": [
+              {
+                "color":"Dusk/Naval Blue",
+                "img_src": "https://www.rei.com/media/6a3a993e-f1b0-4638-8bb7-c2591116d64f"
+              },
+              {
+                "color":"Hemlock",
+                "img_src": "https://www.rei.com/media/158b473d-bbbe-4b76-a9ee-e59e442252eb"
+              },
+              {
+                "color":"Pewter",
+                "img_src": "https://www.rei.com/media/32390a43-bef8-474a-bc02-470beb239ca9"
+              },
+              {
+                "color":"Tomato/Firebrick",
+                "img_src": "https://www.rei.com/media/aaa2808d-afbc-4984-93c1-683314cc344d"
+              }
+            ],
+            "retail_price": 200.00,
+            "pro_price": 150.00
         },
         {
             "id": 3,
-            "brand": "Hydrogen",
-            "jacket_name": "colorlessgas",
-            "img_src": "108"
+            "brand": "Marmot",
+            "jacket_name": "Tullus Down Jacket",
+            "available_sizes": ["S", "M", "L", "XL", "XXL"],
+            "colors": [
+              {
+                "color":"Dark Cerulean",
+                "img_src": "https://www.rei.com/media/26e3b213-fdd3-4c2f-9a01-3021d980535d"
+              },
+              {
+                "color":"Forest Night",
+                "img_src": "https://www.rei.com/media/8d0b9daf-678a-46fa-b5d0-3314579aa03f"
+              },
+              {
+                "color":"Sienna Red",
+                "img_src": "https://www.rei.com/media/00754e92-cfaf-4fdb-90aa-72dac21e2acb"
+              }
+            ],
+            "retail_price": 200.00,
+            "pro_price": 150.00
         },
         {
             "id": 4,
-            "brand": "Hydrogen",
-            "jacket_name": "colorlessgas",
-            "img_src": "108"
+            "brand": "Arc'teryx",
+            "jacket_name": "Alpha AR Jacket",
+            "available_sizes": ["XS", "S", "M", "L", "XL"],
+            "colors": [
+              {
+                "color":"Magma",
+                "img_src": "https://www.rei.com/media/0fe1e60e-381d-4cc8-a7ee-a6723c284e4a"
+              },
+              {
+                "color":"Triton",
+                "img_src": "https://www.rei.com/media/d23ad8b1-9736-4f73-83f9-60a947453d54"
+              }
+            ],
+            "retail_price": 200.00,
+            "pro_price": 150.00
         },
         {
             "id": 5,
-            "brand": "Hydrogen",
-            "jacket_name": "colorlessgas",
-            "img_src": "108"
+            "brand": "Patagonia",
+            "jacket_name": "Descensionist Jacket",
+            "available_sizes": ["S", "M", "L", "XL"],
+            "colors": [
+              {
+                "color":"Black",
+                "img_src": "https://www.rei.com/media/e72acf45-3cf3-410b-ba1c-d6fa1b59f3fa"
+              },
+              {
+                "color":"Copper Ore",
+                "img_src": "https://www.rei.com/media/c18e2632-49ca-47b0-9e03-b60eeb160e8e"
+              },
+              {
+                "color":"Textile Green",
+                "img_src": "https://www.rei.com/media/7f4820e2-e9cf-42da-9010-ea3b53cc73c8"
+              }
+            ],
+            "retail_price": 200.00,
+            "pro_price": 150.00
         },
         {
             "id": 6,
-            "brand": "Hydrogen",
-            "jacket_name": "colorlessgas",
-            "img_src": "108"
+            "brand": "Columbia",
+            "jacket_name": "Wild Card Interchange 3-in-1 Jacket",
+            "available_sizes": ["S", "M", "L", "XL", "XXL"],
+            "colors": [
+              {
+                "color":"Azul/Collegiate Navy",
+                "img_src": "https://www.rei.com/media/a3d82602-6b61-4caf-b14f-a4a5f56e57ed"
+              },
+              {
+                "color":"Black",
+                "img_src": "https://www.rei.com/media/a5cb885f-af06-43f7-afb7-15fea2c842b3"
+              },
+              {
+                "color":"Shark/Burnished Amber",
+                "img_src": "https://www.rei.com/media/aa8d3108-63cd-4ac8-a2b2-5c427ce8f845"
+              }
+            ],
+            "retail_price": 200.00,
+            "pro_price": 150.00
         },
         {
             "id": 7,
-            "brand": "Hydrogen",
-            "jacket_name": "colorlessgas",
-            "img_src": "108"
+            "brand": "Black Diamond",
+            "jacket_name": "Liquid Point Shell Jacket",
+            "available_sizes": ["S", "M", "L", "XL", "XXL"],
+            "colors": [
+              {
+                "color":"Hyper Red",
+                "img_src": "https://www.rei.com/media/e99e048a-beb0-49bb-ab89-46f578cdfb5e"
+              },
+              {
+                "color":"Nickel",
+                "img_src": "https://www.rei.com/media/d396b19a-7564-42e1-a232-9e441cc38268"
+              },
+              {
+                "color":"Walnut",
+                "img_src": "https://www.rei.com/media/9ab7c383-500e-4280-9a1c-70ea4833bd09"
+              }
+            ],
+            "retail_price": 200.00,
+            "pro_price": 150.00
         },
         {
             "id": 8,
-            "brand": "Hydrogen",
-            "jacket_name": "colorlessgas",
-            "img_src": "108"
+            "brand": "Swix",
+            "jacket_name": "Delda Light Soft-Shell Jacket",
+            "available_sizes": ["S", "M", "L", "XL", "XXL"],
+            "colors": [
+              {
+                "color":"Magnet",
+                "img_src": "https://www.rei.com/media/95f72d32-7d15-46c1-9a6a-eea130ef0485"
+              }
+            ],
+            "retail_price": 200.00,
+            "pro_price": 150.00
         },
         {
             "id": 9,
-            "brand": "Hydrogen",
-            "jacket_name": "colorlessgas",
-            "img_src": "108"
+            "brand": "Mammut",
+            "jacket_name": "Convey Down Jacket",
+            "available_sizes": ["S", "M", "L", "XL", "XXL"],
+            "colors": [
+              {
+                "color":"Clover/Canary",
+                "img_src": "https://www.rei.com/media/d323e72b-706f-4ded-a248-6c091fe95066"
+              },
+              {
+                "color":"Imperial/Ultramarine",
+                "img_src": "https://www.rei.com/media/f560bdaf-2534-4be9-900c-5fa4a343d951"
+              }
+            ],
+            "retail_price": 200.00,
+            "pro_price": 150.00
         }
     ]
 }
