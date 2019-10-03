@@ -10,8 +10,11 @@ const ProductThumb = (props) => {
       <br/>
       <label>{jacketData["brand"]}</label>
       <p>{jacketData["jacket_name"]}</p>
-      <span className="pro-price">{jacketData["pro_price"]}</span>
-      <span className="retail-price">{jacketData["retail_price"]}</span>
+
+      <div>
+        <span className="pro-price">${jacketData["pro_price"]}</span>
+        <span className="retail-price">${jacketData["retail_price"]}</span>
+      </div>
     </div>
   );
 }
