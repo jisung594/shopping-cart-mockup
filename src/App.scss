@@ -5,66 +5,116 @@ $opensans: 'Open Sans', sans-serif;
 
 .App {
   display: grid;
-  grid-template-rows: 50px auto;
+  grid-template-rows: 70px auto;
 
   .navbar {
+    display: grid;
+    grid-template-columns: 85% 15%;
     background-color: gray;
 
-    h2 {
-      font-family: $opensans;
-      font-size: 18px;
-      margin: 0;
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      // justify-content: center;
+      height: 70px;
+
+      #logo {
+        margin:0;
+        transform: scale(0.5);
+      }
+    }
+
+
+    .icons {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      height: 70px;
+
+      img {
+        transform: scale(0.8);
+      }
     }
   }
 
   .main-container {
-    display: grid;
-    grid-template-rows: 80px auto;
+    position: relative;
 
-    h2 {
-      font-family: $oswald;
-      font-size: 50px;
-      margin: 0;
+
+    .shopping-cart {
+      position: absolute;
+      background-color: lightblue;
+      width: 400px;
+      height: auto;
+      top: 0;
+      right: 0;
+
+      .subtotal {
+        div {
+          display: inline-block;
+
+
+        }
+      }
+
+      button {
+        width: 350px;
+        height: 50px;
+      }
     }
 
-    .thumbsList {
+
+    .results {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 80px auto;
 
-      .thumb {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin: 20px;
+      h2 {
+        font-family: $oswald;
+        font-size: 50px;
+        margin: 0;
+      }
 
-        label {
-          font-family: $oswald;
-          font-size: 18px;
-        }
+      .thumbsList {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
 
-        p {
-          font-family: $opensans;
-          font-size: 14px;
-          margin-top: 3px;
-        }
+        .thumb {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin: 20px;
 
-        div {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          font-family: $opensans;
-
-          .pro-price {
-            margin: 0 1vw;
-            color: red;
+          label {
+            font-family: $oswald;
+            font-size: 18px;
           }
 
-          .retail-price {
-            margin: 0 1vw;
-            text-decoration: line-through;
+          p {
+            font-family: $opensans;
+            font-size: 14px;
+            margin-top: 3px;
           }
-        }
 
+          div {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            font-family: $opensans;
+
+            .pro-price {
+              margin: 0 1vw;
+              color: red;
+            }
+
+            .retail-price {
+              margin: 0 1vw;
+              text-decoration: line-through;
+            }
+          }
+
+        }
       }
     }
   }

@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import '../App.scss';
 
 const ProductThumb = (props) => {
-  let { jacketData } = props;
+  let { jacketData, clickHandler } = props;
 
   return (
     <div className="thumb">
@@ -15,6 +16,9 @@ const ProductThumb = (props) => {
         <span className="pro-price">${jacketData["pro_price"]}</span>
         <span className="retail-price">${jacketData["retail_price"]}</span>
       </div>
+      <Link className="link" to={`/insulated/${jacketData.id}`}>
+        <button className="view-profile" onClick={() => clickHandler(jacketData)}>View</button>
+      </Link>
     </div>
   );
 }
