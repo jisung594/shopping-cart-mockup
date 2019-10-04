@@ -6,7 +6,7 @@ const Results = (props) => {
   let { jacketsList, clickHandler } = props;
 
   let jacketThumbs = jacketsList.map(jacketObj => {
-    return <ProductThumb key={jacketObj["id"]} jacketData={jacketObj} clickHandler={clickHandler}/>
+    return <ProductThumb key={jacketObj.id} jacketData={jacketObj} clickHandler={clickHandler}/>
   })
 
   return (

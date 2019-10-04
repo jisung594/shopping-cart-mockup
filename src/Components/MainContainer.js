@@ -22,14 +22,19 @@ class MainContainer extends Component {
     return (
       <div className="main-container">
         <Switch>
-          <Route path={`/insulated/${this.state.clickedJacket.id}`} render={()=> {
-            return <ProductProfile jacketObj={this.state.clickedJacket}/>
+          <Route path='/insulated/:id' render={(routerProps)=> {
+            let id = routerProps.match.params.id
+            let foundJacket = this.state.jacketsData.find(jacketObj => {
+              return jacketObj.id === parseInt(id)
+            })
+
+            return <ProductProfile key={foundJacket.id} jacketObj={foundJacket}/>
           }}/>
           <Route path='/insulated' render={()=> {
             return <Results jacketsList={this.state.jacketsData} clickHandler={this.clickHandler}/>
           }}/>
         </Switch>
-        <ShoppingCart />
+        <ShoppingCart/>
       </div>
     );
   }
