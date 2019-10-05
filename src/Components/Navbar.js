@@ -9,9 +9,7 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <div>
-        <img id="logo" src={outdoorlyLogo} alt="logo"/>
-      </div>
+      <img id="logo" src={outdoorlyLogo} alt="logo"/>
 
       <div className="icons">
         <img src={profileIcon} alt="profile"/>
