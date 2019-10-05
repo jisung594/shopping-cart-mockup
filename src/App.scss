@@ -44,26 +44,34 @@ $opensans: 'Open Sans', sans-serif;
   .main-container {
     position: relative;
 
-
     .shopping-cart {
       position: absolute;
       background-color: lightblue;
       width: 400px;
-      height: auto;
+      height: 60%;
       top: 0;
       right: 0;
+      overflow: scroll;
 
       .subtotal {
         div {
           display: inline-block;
-
-
         }
       }
 
-      button {
-        width: 350px;
-        height: 50px;
+      .cart-footer {
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        // justify-content: center;
+        position: absolute;
+        bottom: 0;
+
+        button {
+          margin: 20px 0;
+          width: 350px;
+          height: 50px;
+        }
       }
     }
 

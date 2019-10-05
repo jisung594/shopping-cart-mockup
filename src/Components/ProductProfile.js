@@ -19,8 +19,7 @@ const ProductProfile = (props) => {
 
   if (jacketObj.id) {
     jacketSizes = jacketObj.available_sizes.map((size, i) => {
-      return <label
-        key={i+1} onClick={() => selectSize(size)}>{size}</label>
+      return <label key={i+1} onClick={() => selectSize(size)}>{size}</label>
     })
 
     jacketByColor = jacketObj.colors.map((color, i) => {
@@ -32,14 +31,14 @@ const ProductProfile = (props) => {
     })
   }
 
-console.log(state);
+// console.log(state);
 
   return (
     <div className="profile">
 
       <button onClick={
         state.size && state.color
-          ? () => addToCart(jacketObj)
+          ? () => addToCart({jacket: jacketObj, size: state.size, color: state.color})
           : () => {window.alert("Please specify both size and color.")}
       }>Add to Cart</button>
 
