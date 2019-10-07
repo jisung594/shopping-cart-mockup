@@ -7,20 +7,20 @@ const CartItem = (props) => {
   return (
     <div className="cart-item">
 
-      <div>
-        <img src={cartItem.img_src} alt={cartItem.color} className="cart-img"/>
+      <div className="cart-item-col-1">
+        <img src={cartItem.img_src} alt={cartItem.color}/>
       </div>
 
-      <div>
+      <div className="cart-item-col-2">
         <label>{cartItem.jacket.brand}</label>
         <h4>{cartItem.jacket.jacket_name}</h4>
         <p>{cartItem.size} / {cartItem.color}</p>
       </div>
 
-      <div>
-        <div>
-          <span>${cartItem.jacket.retail_price}</span>
-          <span>${cartItem.jacket.pro_price}</span>
+      <div className="cart-item-col-3">
+        <div className="prices">
+          <span id="retail-price">${cartItem.jacket.retail_price}</span>
+          <span id="pro-price">${cartItem.jacket.pro_price}</span>
         </div>
 
         <div className="update-quantity">

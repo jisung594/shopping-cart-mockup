@@ -3,6 +3,7 @@
 $oswald: 'Oswald', sans-serif;
 $opensans: 'Open Sans', sans-serif;
 $amaranth: #FF4C5E;
+$medium-gray: #B0B0B0;
 
 .App {
   display: grid;
@@ -182,10 +183,10 @@ $amaranth: #FF4C5E;
 
       #cart-header {
         position: sticky;
-        font-family: $oswald;
-        font-size: 28px;
+        font-family: $opensans;
+        font-size: 22px;
         font-weight: 700;
-        margin: 50px 25px;
+        margin: 50px 0 25px 25px;
         position: sticky;
         top: 0;
       }
@@ -195,9 +196,6 @@ $amaranth: #FF4C5E;
       }
 
       .price {
-        // display: grid;
-        // grid-template-columns: 1fr 1fr;
-        // justify-content: space-between;
         width: 320px;
         margin: 10px auto;
 
@@ -219,38 +217,88 @@ $amaranth: #FF4C5E;
           margin: 2px 0;
           color: $amaranth;
         }
-
-        // p {
-        //   font-family: $opensans;
-        //   margin: 10px 0;
-        // }
-        //
-        // p {
-        //   text-align: right;
-        // }
       }
 
 
       .cart-item {
-        margin: auto;
+        margin: 25px auto;
 
         display: grid;
         grid-template-columns: 80px 160px 80px;
         width: 320px;
 
-        img {
+        .cart-item-col-1 img {
           border: 10px solid white;
-          height: 80px;
+          height: 60px;
         }
 
-        .update-quantity {
-          border: 1px solid lightgray;
-          border-radius: 5px;
-          height: 30px;
-          width: 60px;
+        .cart-item-col-2 {
+          font-family: $opensans;
 
-          span {
+          label {
+            font-size: 12px;
+            font-weight: 600;
+            color: $medium-gray;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin: 5px 0;
+          }
+
+          h4 {
             font-size: 16px;
+            font-weight: 600;
+            margin: 5px 0;
+          }
+
+          p {
+            font-size: 14px;
+            font-weight: 600;
+            color: $medium-gray;
+            margin: 5px 0;
+          }
+        }
+
+        .cart-item-col-3 {
+          margin: auto;
+
+          .prices, .update-quantity {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .prices span {
+            font-family: $opensans;
+            font-size: 13px;
+            font-weight: 600;
+            margin: 0 4px;
+            color: $amaranth;
+          }
+
+          #retail-price {
+            color: $amaranth;
+          }
+
+          #pro-price {
+            color: $medium-gray;
+            text-decoration: line-through;
+          }
+
+          .update-quantity {
+            border: 1px solid lightgray;
+            border-radius: 5px;
+            height: 25px;
+            width: 60px;
+            margin: auto;
+
+            span {
+              font-family: $opensans;
+              font-size: 16px;
+              font-weight: 600;
+              margin: 0 5px;
+              color: #323232;
+            }
           }
         }
       }
