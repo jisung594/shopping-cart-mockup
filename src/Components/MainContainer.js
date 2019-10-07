@@ -11,9 +11,9 @@ class MainContainer extends Component {
   state = {
     jacketsData: jacketData["jackets"],
     clickedJacket: ls.get('clickedJacket') || {},
-    cart: ls.get('cart') || []
+    cart: ls.get('cart') || [],
+    recentlyRemoved: {}
   }
-
 
   clickHandler = (jacketObj) => {
     ls.set("clickedJacket", jacketObj)
@@ -32,13 +32,13 @@ class MainContainer extends Component {
   }
 
   removeFromCart = (obj) => {
-    let toBeRemoved = this.state.cart.find(item => {
+    let removeItem = this.state.cart.find(item => {
       return item === obj
     })
 
-    let updatedCart = this.state.cart.filter(item => {
-      return item !== toBeRemoved
-    })
+
+    let updatedCart = this.state.cart.slice()
+    updatedCart.splice(this.state.cart.indexOf(obj), 1)
 
 
     ls.set("cart", updatedCart)
@@ -47,7 +47,16 @@ class MainContainer extends Component {
       cart: updatedCart
     })
 
-    // let updatedCart = this.state.cart.splice()
+
+    let countItemInCart = updatedCart.filter(item => {
+      return item === obj
+    })
+
+    if (countItemInCart.length === 0) {
+      this.setState({
+        recentlyRemoved: removeItem
+      })
+    }
   }
 
 
@@ -61,13 +70,20 @@ class MainContainer extends Component {
               return jacketObj.id === parseInt(id)
             })
 
-            return <ProductProfile jacketObj={foundJacket} addToCart={this.addToCart}/>
+            return <ProductProfile jacketObj={foundJacket} addToCart={this.addToCart} open={this.props.open}/>
           }}/>
           <Route path='/insulated' render={()=> {
             return <Results jacketsList={this.state.jacketsData} clickHandler={this.clickHandler}/>
           }}/>
         </Switch>
-        <ShoppingCart cart={this.state.cart} addToCart={this.addToCart} removeFromCart={this.removeFromCart}/>
+        <ShoppingCart
+          open={this.props.open}
+          setOpen={this.props.setOpen}
+          cart={this.state.cart}
+          addToCart={this.addToCart}
+          removeFromCart={this.removeFromCart}
+          recentlyRemoved={this.state.recentlyRemoved}
+        />
       </div>
     );
   }
