@@ -1,5 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { setState, useEffect } from 'react';
 import CartItem from './CartItem'
+import cartIcon from '../shopping-cart-lg.png'
+
 import '../App.scss';
 
 const ShoppingCart = (props) => {
@@ -12,9 +14,9 @@ const ShoppingCart = (props) => {
     setOpen
   } = props;
 
+
   useEffect(() => {
     open ? openCart() : closeCart()
-
     emptyCart()
   })
 
@@ -22,10 +24,19 @@ const ShoppingCart = (props) => {
     const shoppingCart = document.querySelector(".shopping-cart")
 
     if (!cart.length) {
-      shoppingCart.innerHTML = `<div>
-        <h2>Your cart is empty</h2>
+      shoppingCart.innerHTML = `<div id="empty-cart">
+        <img id="cart-icon" src="" alt="cart icon"/>
+        <h2 id="empty-header">Shopping Cart</h2>
+        <p id="empty-msg">Your cart is empty</p>
+        <button id="continue-btn">Continue Shopping</button>
       </div>`
     }
+
+    let cartImg = document.querySelector("#cart-icon")
+    if (cartImg) cartImg.src = cartIcon
+
+    let continueBtn = document.querySelector("#continue-btn")
+    if (continueBtn) continueBtn.addEventListener("click", ()=>setOpen(!open))
   }
 
 
@@ -75,15 +86,22 @@ const ShoppingCart = (props) => {
   return (
     <div className="shopping-cart">
       <label id="close-button" onClick={()=>setOpen(!open)}>✕</label>
-      <h2 id="cart-header">Shopping Cart</h2>
+      <h2 className="cart-header">Shopping Cart</h2>
 
       <div className="cart-items">
         {cartItems}
         {
           !cart.includes(recentlyRemoved) && recentlyRemoved.size
-          ? <div>
-              <h2>{recentlyRemoved.jacket.jacket_name} ({recentlyRemoved.color}, {recentlyRemoved.size}) was removed from your cart.</h2>
-              <button onClick={() => addToCart(recentlyRemoved)}>Undo</button>
+          ? <div className="cart-item">
+              <div className="cart-item-col-1">
+                <img src={recentlyRemoved.color.img_src} alt="color"/>
+              </div>
+              <div className="cart-item-col-2">
+                <p>{recentlyRemoved.jacket.jacket_name} was removed from your cart.</p>
+              </div>
+              <div className="update-quantity">
+                <span onClick={() => addToCart(recentlyRemoved)}>Undo</span>
+              </div>
             </div>
           : null
         }
@@ -99,15 +117,6 @@ const ShoppingCart = (props) => {
           <p>Pro Savings</p>
           <p>${proSavings}</p>
         </div>
-        {/*<div>
-          <p>Subtotal</p>
-          <p className="pro-savings">Pro Savings</p>
-        </div>
-
-        <div>
-          <p>${subTotal}</p>
-          <p className="pro-savings">${proSavings}</p>
-        </div>*/}
       </div>
 
 

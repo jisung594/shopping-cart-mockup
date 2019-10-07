@@ -6,8 +6,7 @@ const ProductProfile = (props) => {
   const [state, setState] = useState({
     size: "",
     color: "",
-    img_src: "",
-    selectedColor: ""
+    img_src: ""
   })
 
 
@@ -34,12 +33,11 @@ const ProductProfile = (props) => {
     });
   }
 
-  const selectColor = (colorObj,i) => {
+  const selectColor = (colorObj) => {
     setState({
       size: state.size,
       color: colorObj.color,
-      img_src: colorObj.img_src,
-      selectedColor: `color-${i}`
+      img_src: colorObj.img_src
     });
   }
 
@@ -62,12 +60,11 @@ const ProductProfile = (props) => {
         className="color-selection"
         src={color.img_src}
         alt={color.color}
-        style={state.selectedColor === `color-${i}` ? {border: "20px solid #FF4C5E"} : null}
-        onClick={() => selectColor(color,i)}
+        style={state.color === color.color ? {border: "20px solid #FF4C5E"} : null}
+        onClick={() => selectColor(color)}
       />
     })
   }
-
 
   return (
     <div className="profile">

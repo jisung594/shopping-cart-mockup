@@ -19,8 +19,8 @@ const CartItem = (props) => {
 
       <div className="cart-item-col-3">
         <div className="prices">
-          <span id="retail-price">${cartItem.jacket.retail_price}</span>
           <span id="pro-price">${cartItem.jacket.pro_price}</span>
+          <span id="retail-price">${cartItem.jacket.retail_price}</span>
         </div>
 
         <div className="update-quantity">
